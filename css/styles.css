@@ -125,10 +125,36 @@ h1, h2, h3, h4 {
 }
 .cart-link { line-height: 0; }
 
+.nav-dropdown-wrap { position: relative; }
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 14px);
+  left: 0;
+  min-width: 190px;
+  margin: 0;
+  padding: 8px 0;
+  list-style: none;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 12px 30px rgba(43, 0, 131, 0.18);
+  z-index: 100;
+}
+.nav-right .nav-dropdown-wrap .dropdown-menu { left: auto; right: 0; }
+.nav-dropdown-wrap.open .dropdown-menu { display: block; }
+.dropdown-menu li a {
+  display: block;
+  padding: 10px 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-dark);
+}
+.dropdown-menu li a:hover { background: var(--gray-bg); color: var(--purple); }
+
 /* ---------- Hero ---------- */
 .hero {
   background: #6429db;
-  padding: 70px 0;
+  padding: 50px 0;
   overflow: hidden;
 }
 .hero-inner {
@@ -151,7 +177,7 @@ h1, h2, h3, h4 {
 .hero-reorder a { font-weight: 700; text-decoration: underline; }
 .hero .btn-coral { padding: 20px 70px; }
 .hero-media { flex: 1; }
-.hero-media img { width: calc(100% + 200px); max-width: none; margin-left: -50px; }
+.hero-media img { width: calc(100% + 200px); max-width: none; margin-left: -135px; }
 
 /* ---------- Tissue section ---------- */
 .tissue { padding: 90px 0; }
@@ -254,7 +280,8 @@ h1, h2, h3, h4 {
   line-height: 1.6;
   margin-bottom: 20px;
 }
-.get-badges { color: var(--text-gray-light); font-size: 0.8rem; margin-bottom: 20px; }
+.get-badges { display: inline-block; color: var(--text-gray-light); font-size: 0.8rem; margin-bottom: 20px; }
+.get-badges:hover { text-decoration: underline; }
 
 .stars { margin: 0 auto 8px; }
 .verified {
@@ -351,6 +378,26 @@ h1, h2, h3, h4 {
 .eco-badge-link { display: flex; align-items: center; gap: 10px; }
 .eco-badge-link a { text-decoration: underline; color: #fff; }
 .eco-badge-link img { width: 36px; height: 36px; }
+
+/* ---------- Generic stub page content ---------- */
+.page-content { padding: 90px 0 140px; }
+.page-content .breadcrumb {
+  display: inline-block;
+  margin-bottom: 32px;
+  color: var(--purple);
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+.page-content .breadcrumb:hover { text-decoration: underline; }
+.page-content h1 { font-size: 2.2rem; color: var(--coral); max-width: 700px; margin-bottom: 20px; }
+.page-content .page-lede {
+  font-size: 1.05rem;
+  color: var(--text-dark);
+  max-width: 600px;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+.page-content .card-text { max-width: 600px; }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 900px) {
