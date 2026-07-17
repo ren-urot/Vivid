@@ -154,7 +154,7 @@ h1, h2, h3, h4 {
 /* ---------- Hero ---------- */
 .hero {
   background: #6429db;
-  padding: 50px 0;
+  padding: 62.5px 0;
   overflow: hidden;
 }
 .hero-inner {
@@ -177,7 +177,7 @@ h1, h2, h3, h4 {
 .hero-reorder a { font-weight: 700; text-decoration: underline; }
 .hero .btn-coral { padding: 20px 70px; }
 .hero-media { flex: 1; }
-.hero-media img { width: calc(100% + 200px); max-width: none; margin-left: -135px; }
+.hero-media img { width: calc((100% + 200px) * 0.84 + 8px); max-width: none; margin-left: calc(-135px + 10%); }
 
 /* ---------- Tissue section ---------- */
 .tissue { padding: 90px 0; }
