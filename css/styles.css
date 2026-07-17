@@ -123,7 +123,24 @@ h1, h2, h3, h4 {
   border-top: 5px solid currentColor;
   display: inline-block;
 }
-.cart-link { line-height: 0; }
+.cart-link { position: relative; line-height: 0; color: var(--coral); }
+.cart-icon-svg { width: 24px; height: 24px; display: block; }
+.cart-count {
+  position: absolute;
+  top: -9px;
+  right: -9px;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background: #14b8a6;
+  color: #fff;
+  font-size: 0.65rem;
+  font-weight: 700;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 .nav-dropdown-wrap { position: relative; }
 .dropdown-menu {
@@ -177,7 +194,7 @@ h1, h2, h3, h4 {
 .hero-reorder a { font-weight: 700; text-decoration: underline; }
 .hero .btn-coral { padding: 20px 70px; }
 .hero-media { flex: 1; }
-.hero-media img { width: calc((100% + 200px) * 0.84 + 8px); max-width: none; margin-left: calc(-135px + 10%); }
+.hero-media img { width: calc((100% + 200px) * 0.84 + 18px); max-width: none; margin-left: calc(-135px + 10%); }
 
 /* ---------- Tissue section ---------- */
 .tissue { padding: 90px 0; }
@@ -249,6 +266,8 @@ h1, h2, h3, h4 {
 
 .pill {
   display: inline-block;
+  width: 65%;
+  align-self: center;
   font-size: 0.7rem;
   font-weight: 700;
   letter-spacing: 0.05em;
